@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookByte.Models", "BookByte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookByte.DataAccess", "BookByte.DataAccess\BookByte.DataAccess.csproj", "{26B83076-DF49-4254-8A0F-E411A319C056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookByte.Utility", "BookByte.Utility\BookByte.Utility.csproj", "{015BC8C4-BD3F-449D-B87A-FC7512B60B02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{26B83076-DF49-4254-8A0F-E411A319C056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B83076-DF49-4254-8A0F-E411A319C056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26B83076-DF49-4254-8A0F-E411A319C056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015BC8C4-BD3F-449D-B87A-FC7512B60B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015BC8C4-BD3F-449D-B87A-FC7512B60B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015BC8C4-BD3F-449D-B87A-FC7512B60B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015BC8C4-BD3F-449D-B87A-FC7512B60B02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
