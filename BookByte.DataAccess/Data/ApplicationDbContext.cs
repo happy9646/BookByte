@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookByte.Data
+namespace BookByte.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

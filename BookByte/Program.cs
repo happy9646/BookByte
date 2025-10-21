@@ -1,4 +1,5 @@
-using BookByte.Data;
+using BookByte.DataAccess;
+using BookByte.DataAccess.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
