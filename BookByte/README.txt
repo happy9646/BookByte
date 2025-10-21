@@ -14,3 +14,5 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
 
       2 This project utilizes compiled classes to enhance performance and maintain a clean separation between logic and presentation.
       By precompiling reusable components, the application achieves faster execution and better modularity
+
+      3 Also, add the compiled class for DataAccess.  
