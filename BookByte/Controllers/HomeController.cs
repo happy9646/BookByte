@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using BookByte.Models;
+using BookByte.models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookByte.Controllers

@@ -20,4 +20,9 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
       4 Add the compiled Utility class to the common codebase
 
       5 I deleted the default Class1 that was created when the project was added.
-      Then, I moved the Models folder from the main project directory into the BookByte.Models folder and updated the namespace accordingly
+        Then, I moved the Models folder from the main project directory into the BookByte.Models folder and updated the namespace accordingly
+
+      6 It's important to clean and build the main project. It may throw an error because it references another project.
+        To resolve this, right-click the main project and add the necessary project reference.
+
+      7 Same change for the view Shared error file change the namespace to BookByte.Models
