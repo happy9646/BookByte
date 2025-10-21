@@ -18,3 +18,6 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
       3 Also, add the compiled class for DataAccess.  
 
       4 Add the compiled Utility class to the common codebase
+
+      5 I deleted the default Class1 that was created when the project was added.
+      Then, I moved the Models folder from the main project directory into the BookByte.Models folder and updated the namespace accordingly

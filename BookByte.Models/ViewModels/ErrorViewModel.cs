@@ -1,4 +1,4 @@
-namespace BookByte.Models
+namespace BookByte.models.ViewModels
 {
     public class ErrorViewModel
     {
