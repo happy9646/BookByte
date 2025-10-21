@@ -16,3 +16,5 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
       By precompiling reusable components, the application achieves faster execution and better modularity
 
       3 Also, add the compiled class for DataAccess.  
+
+      4 Add the compiled Utility class to the common codebase
