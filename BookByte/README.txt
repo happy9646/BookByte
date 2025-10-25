@@ -26,3 +26,10 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
         To resolve this, right-click the main project and add the necessary project reference.
 
       7 Same change for the view Shared error file change the namespace to BookByte.Models
+     
+      8  Follow the same process for the DataAccess project: cut the Data folder from the main project, paste it into the DataAccess project,
+        update the namespace accordingly, and install the required packages.
+
+
+2   After that change the default connection string in the appsettings.json file then go to the program.cs file and update the constring string 
+    and same change the database name into the appsettings.json file.
