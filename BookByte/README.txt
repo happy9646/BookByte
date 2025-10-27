@@ -36,4 +36,6 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
 
 
 3 Create the Area into main project for the Customer and it`s name is customer then delete the data folder , model folder, then Cut the HomeController from
-  the Main Project`s Home controller and paste it into the Customer Area controller folder.
+  the Main Project`s Home controller and paste it into the Customer Area controller folder. 
+
+  1 after this process then delete the controller folder form the outer main project
