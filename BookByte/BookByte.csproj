@@ -22,8 +22,4 @@
     <ProjectReference Include="..\BookByte.Utility\BookByte.Utility.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\Customer\Views\" />
-  </ItemGroup>
-
 </Project>

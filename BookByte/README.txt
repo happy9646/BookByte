@@ -39,3 +39,6 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
   the Main Project`s Home controller and paste it into the Customer Area controller folder. 
 
   1 after this process then delete the controller folder form the outer main project
+  2 remeber the when use the Area Controller the you should use the [Area("Customer")] above the controller class")]
+  3 same as the view cut from main project then it paste into Area`s Customer view
+  4 like this add  pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");  into program.cs file that will works the project
