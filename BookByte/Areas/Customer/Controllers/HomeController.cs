@@ -2,7 +2,7 @@ using System.Diagnostics;
 using BookByte.models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookByte.Controllers
+namespace BookByte.Areas.Customer.Controllers
 {
     public class HomeController : Controller
     {

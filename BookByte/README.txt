@@ -33,3 +33,7 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
 
 2   After that change the default connection string in the appsettings.json file then go to the program.cs file and update the constring string 
     and same change the database name into the appsettings.json file.
+
+
+3 Create the Area into main project for the Customer and it`s name is customer then delete the data folder , model folder, then Cut the HomeController from
+  the Main Project`s Home controller and paste it into the Customer Area controller folder.
