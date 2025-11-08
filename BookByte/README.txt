@@ -42,3 +42,31 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
   2 remeber the when use the Area Controller the you should use the [Area("Customer")] above the controller class")]
   3 same as the view cut from main project then it paste into Area`s Customer view
   4 like this add  pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");  into program.cs file that will works the project
+  5 after that run the project it will works fine. but then it show the layout becasue we need copy the files view`s ViewImports.cshtml and ViewStart.cshtml from main project to Area`s Customer View folder   
+
+
+  4 Same for Create the Admin Area into main project for the Admin and it`s name is Admin then delete the data folder , model folder, then Cut the HomeController from
+    the Main Project`s Home controller and paste it into the Admin Area controller folder. 
+    1 after this process then delete the controller folder form the outer main project
+    2 remeber the when use the Area Controller the you should use the [Area("Admin")] above the controller class")]
+    3 same as the view cut from main project then it paste into Area`s Admin view
+    4 like this add  pattern: "{area=Admin}/{controller=Home}/{action=Index}/{id?}");  into program.cs file that will works the project
+    5 after that run the project it will works fine. but then it show the layout becasue we need copy the files view`s ViewImports.cshtml and ViewStart.cshtml from main project to Area`s Admin View folder
+
+
+    5 After this work`s works done then go to Nugetpage Console then select the project where we add the migration for the Identity frameWork remaber 
+    Two basic class`s       add-migration intiLoad
+                            update-database    
+
+
+   6 So another project install here runtimeCompilation package that will help to update the changes without rebuild the project
+      Install-Package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 
+      1 the add into the program.cs file builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation(); // Enable runtime compilation for Razor views
+   
+   7 Now add the Theme for layout  go to website   https://bootswatch.com/yeti/  then copy the bootstap.css  then go to project 
+     directory wwwroot/lib/dist/css/bootstap.css  then paste here which copy the code 
+
+     after that go to layout then  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /> show the  in last before the css remove the min.
+     then run the project 
+
+        
