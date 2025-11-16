@@ -69,4 +69,18 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
      after that go to layout then  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /> show the  in last before the css remove the min.
      then run the project 
 
+   8 Now Create Models into the Models project 
+      2 Category.cs
+      3 CoverType.cs
+      then go to DataAccess project create the folder name is ApplicationDbContext.cs remember don't forget add the reference the Models project into DataAccess project
+      then create the DBsets for the Category and CoverType
+     
+
+     9 After this work create the migration for the Models project that we create just now
+       add-migration addCategoryAndCoverType -Project BookByte.DataAccess -StartupProject BookByte
+       update-database -Project BookByte.DataAccess -StartupProject BookByte
+
+    10  This project implements the Generic Repository pattern to promote code reusability and separation of concerns in data access. By abstracting common CRUD operations into a generic base class, we reduce duplication and simplify interaction with the Entity Framework.
+        Each entity type can be managed through a shared interface, making the codebase cleaner and easier to maintain
         
+        1 Go to DataAccess project create the folder name is Repository then inside add the IRepository 
