@@ -84,3 +84,4 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
         Each entity type can be managed through a shared interface, making the codebase cleaner and easier to maintain
         
         1 Go to DataAccess project create the folder name is Repository then inside add the IRepository 
+        2 then create the folder name is Repository then inside add the Repository class that implement the IRepository
