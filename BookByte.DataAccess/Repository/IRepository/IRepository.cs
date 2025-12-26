@@ -32,15 +32,20 @@ namespace BookByte.DataAccess.Repository.IRepository
         IEnumerable<T> GetAll(
             Expression<Func<T,bool>> filter=null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy=null,
-            string includeProperties= "null"  // Category, CoverType
+            string includeProperties= null  // Category, CoverType
             );
         // here this code is for only one item
 
-         T GetOrDefault(
-          Expression<Func<T, bool>> filter = null,
-          string includeProperties = "null"
+        // here this code is for only one item or default value and sorting
+        //T GetOrDefault(
+        //  Expression<Func<T, bool>> filter = null,
+        //  string includeProperties = "null"
+        //);
 
-        );
+        T GetFirstOrDefault(
+         Expression<Func<T, bool>> filter = null,
+         string includeProperties = "null"
+       );
 
     }
 }
