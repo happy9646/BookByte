@@ -61,7 +61,7 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
 
    6 So another project install here runtimeCompilation package that will help to update the changes without rebuild the project
       Install-Package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 
-      1 the add into the program.cs file builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation(); // Enable runtime compilation for Razor views
+      1 the add into the program.cs file builder.Services.AddControllersWithViews().A   ddRazorRuntimeCompilation(); // Enable runtime compilation for Razor views
    
    7 Now add the Theme for layout  go to website   https://bootswatch.com/yeti/  then copy the bootstap.css  then go to project 
      directory wwwroot/lib/dist/css/bootstap.css  then paste here which copy the code 
@@ -85,3 +85,23 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
         
         1 Go to DataAccess project create the folder name is Repository then inside add the IRepository 
         2 then create the folder name is Repository then inside add the Repository class that implement the IRepository
+
+        3 privous repository are use for generic repository now we create the specific repository for the Category and CoverType
+          1 Create the ICategoryRepository that inherit the IRepository<Category>
+          2 Create the CategoryRepository that implement the ICategoryRepository
+          3 Create the ICoverTypeRepository that inherit the IRepository<CoverType> 
+          4 Create the CoverTypeRepository that implement the ICoverTypeRepository  
+
+ 4 Currently, we register repositories one by one, for example:
+ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+ builder.Services.AddScoped<ICoverTypeRepository, CoverTypeRepository>();
+
+ This works fine for small projects, but as the number of repositories grows 
+ (e.g., hundreds or thousands), manually adding each one becomes inefficient.
+
+ To solve this, we can use reflection to automatically register all repository 
+ classes without explicitly listing them here. Alternatively, we can define a 
+ single interface that aggregates all repositories and register it once, 
+ simplifying the setup and reducing repetitive code.   
+
+ 5 so go to data access folder then create then select the IRepository folder then create the IUnitOfWork interface that will aggregate all the repositories and then create the UnitOfWork class that implement the IUnitOfWork interface and then register the UnitOfWork into the program.cs file like this builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

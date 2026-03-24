@@ -1,5 +1,7 @@
 using BookByte.DataAccess;
 using BookByte.DataAccess.Data;
+using BookByte.DataAccess.Repository;
+using BookByte.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +15,14 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation(); // Enable runtime compilation for Razor views
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation(); // Enable runtime compilation for Razor views  
+
+////// add services which is use for contoller and views
+//builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+//builder.Services.AddScoped<ICoverTypeRepository, CoverTypeRepository>();
+
+
+// Register the UnitOfWork service for dependency injection
 
 var app = builder.Build();
 

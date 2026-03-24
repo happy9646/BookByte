@@ -1,51 +1,45 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BookByte.DataAccess.Repository.IRepository
 {
-
-    //A Generic Repository is a reusable repository that works with any entity type.
-    //It uses generics() to avoid duplicating CRUD logic for each entity.
+    // A Generic Repository is a reusable repository that works with any entity type.
+    // It uses generics<T> to avoid duplicating CRUD logic for each entity.
     public interface IRepository<T> where T : class
     {
+        // Add a new entity to the database
         void Add(T entity);
+
+        // Update an existing entity in the database
         void Update(T entity);
+
+        // Remove a specific entity from the database
         void Remove(T entity);
 
-        // when we want to remove an entity by its id 
+        // Remove an entity by its primary key id
         void Remove(int id);
 
-        // when we want to remove multiple entities at once
-        void RemoveRange(IEnumerable<T> entities);  
+        // Remove multiple entities at once
+        void RemoveRange(IEnumerable<T> entities);
 
-        // here this code for find 
-        T get(int id);
+        // Find and return a single entity by its primary key id
+        T Get(int id);                               // ✅ Fixed: was get (lowercase)
 
-        // here this code is for display 
-
+        // Get all entities with optional filter, ordering, and eager loading
+        // includeProperties example: "Category,CoverType"
         IEnumerable<T> GetAll(
-            Expression<Func<T,bool>> filter=null,
-            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy=null,
-            string includeProperties= null  // Category, CoverType
-            );
-        // here this code is for only one item
+            Expression<Func<T, bool>> filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+            string includeProperties = null          // e.g. "Category,CoverType"
+        );
 
-        // here this code is for only one item or default value and sorting
-        //T GetOrDefault(
-        //  Expression<Func<T, bool>> filter = null,
-        //  string includeProperties = "null"
-        //);
-
+        // Get the first entity matching the filter, or null if not found
+        // includeProperties example: "Category,CoverType"
         T GetFirstOrDefault(
-         Expression<Func<T, bool>> filter = null,
-         string includeProperties = "null"
-       );
-
+            Expression<Func<T, bool>> filter = null,
+            string includeProperties = null          // ✅ Fixed: was "null" (string literal)
+        );
     }
 }
