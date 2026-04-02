@@ -104,4 +104,35 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
  single interface that aggregates all repositories and register it once, 
  simplifying the setup and reducing repetitive code.   
 
- 5 so go to data access folder then create then select the IRepository folder then create the IUnitOfWork interface that will aggregate all the repositories and then create the UnitOfWork class that implement the IUnitOfWork interface and then register the UnitOfWork into the program.cs file like this builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+ 5 so go to data access folder then create then select the IRepository folder then create the IUnitOfWork interface 
+ that will aggregate all the repositories and then create the UnitOfWork class that implement the IUnitOfWork interface 
+ and then register the UnitOfWork into the program.cs file like this builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+11 After this work then go to the Area Admin then create the controller name is CategoryController then add the code for the CRUD operation.
+   here we use the UnitOfWork pattern to manage the repositories and ensure that all operations are performed within a single transaction scope. 
+   This allows for better maintainability and separation of concerns in our application. 
+   First , we inject the IUnitOfWork into the controller `s constructor, then we can access the repositories through the UnitOfWork instance to perform Crud operations on the Category entity.
+   then create the view Index Remaber View folder the ViewImports and ViewStart file into the Area Admin view folder then create the Index.cshtml file for the CategoryController and add the code for display the list of categories and also add the code for create, edit and delete the category.
+
+12  After completing this work, we now want to apply DataTables, SweetAlert, Toastr, and FontAwesome.”
+
+    DataTables → For advanced table rendering with search, sort, and pagination.
+
+    SweetAlert → For modern, customizable alert dialogs.
+
+    Toastr → For non-blocking toast notifications.
+
+    FontAwesome → For scalable vector icons. 
+
+    so go to the Layout then add these refrences 
+
+
+    in down side the body tag add the refrences for the DataTables, SweetAlert, Toastr, and FontAwesome. 
+    for Js refrences add the CDN links for these libraries in the _Layout.cshtml file, ensuring they are included after jQuery and Bootstrap scripts.
+    This will allow you to utilize their functionalities across your views for enhanced user experience. 
+
+    then add the dropdown menu for the category in the layout file.
+    then add the links in this dropdown  
+
+13 Now create the Index view for the Category go to controller and Wirte Curd operation for the CategoryController
+

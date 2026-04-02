@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BookByte.DataAccess.Repository.IRepository
 {
-    public class IUnitOfWork
-    { 
-        ICategoryRepository Category { get; } 
+    public interface IUnitOfWork
+    {
+        ICategoryRepository Category { get; }
         ICoverTypeRepository CoverType { get; }
         void Save();
     }
