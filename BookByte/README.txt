@@ -134,5 +134,15 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
     then add the dropdown menu for the category in the layout file.
     then add the links in this dropdown  
 
-13 Now create the Index view for the Category go to controller and Wirte Curd operation for the CategoryController
+13 Category Module – Index & Upsert Implementation
+
+- Implemented Category CRUD operations (Index & Upsert) using CategoryController  
+- Created Index view with DataTables (search, sorting, pagination)  
+- Developed Upsert functionality for both Create and Update in a single view  
+- Integrated DataTables, SweetAlert, Toastr, and FontAwesome for better UI/UX  
+- Created category.js for DataTables initialization and delete handling  
+- Implemented SweetAlert for delete confirmation  
+- Used Toastr for success and error notifications  
+- Added client-side validation using _ValidationScriptsPartial  
+- Organized files under Areas/Admin for clean project structure  
 
