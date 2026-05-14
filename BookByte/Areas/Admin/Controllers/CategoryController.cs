@@ -37,9 +37,13 @@ namespace BookByte.Areas.Admin.Controllers
             return Json(new { data = categoryList });
         }
         #endregion 
+<<<<<<< HEAD
 
         // here Upsert works for both Create and Update
         [HttpGet]                             
+=======
+        // here Upsert works for both Create and Update
+>>>>>>> b13a25a355b56e829c4b750a66cfa66595b81c02
         public IActionResult Upsert(int? id)
         {
             Category category = new Category();
