@@ -29,7 +29,7 @@ function loadDataTable() {
 }
 
 function Delete(url) {
-<<<<<<< HEAD
+
     swal({
         title: "Want to delete data?",
         text: "Delete Information!!!",
@@ -54,7 +54,4 @@ function Delete(url) {
         }
     })
 }
-=======
     alert(url);
-}
->>>>>>> b13a25a355b56e829c4b750a66cfa66595b81c02
