@@ -10,7 +10,6 @@ namespace BookByte.Areas.Admin.Controllers
         public CoverTypeController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-          
         }
 
         public IActionResult Index()
