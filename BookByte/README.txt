@@ -146,3 +146,28 @@ Business Logic, Data Access, and Models, ensuring clear separation of concerns a
 - Added client-side validation using _ValidationScriptsPartial  
 - Organized files under Areas/Admin for clean project structure  
 
+Here is the edited commit message for CoverType:
+
+---
+
+ 14 CoverType Module – Index & Upsert Implementation
+
+- Implemented CoverType CRUD operations (Index & Upsert) using CoverTypeController
+- Created Index view with DataTables (search, sorting, pagination)
+- Developed Upsert functionality for both Create and Update in a single view
+- Integrated DataTables, SweetAlert, Toastr, and FontAwesome for better UI/UX
+- Created covertype.js for DataTables initialization and delete handling
+- Implemented SweetAlert for delete confirmation
+- Used Toastr for success and error notifications
+- Added client-side validation using _ValidationScriptsPartial
+- Organized files under Areas/Admin for clean project structure
+
+15 Partial Views – EditAndBackToListButtons & CreateAndBackToListButtons Implementation
+
+Created reusable Partial View _EditAndBackToListButtons for Edit button and Back to List button
+Created reusable Partial View _CreateAndBackToListButtons for Create button and Back to List button
+Integrated both Partial Views into Category Upsert view for code reusability
+Integrated both Partial Views into CoverType Upsert view for code reusability
+Replaced duplicate button HTML with Partial View calls using @Html.Partial()
+Organized Partial Views under Shared folder for global accessibility
+Reduced code duplication and improved maintainability across Upsert views

@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Upsert";
     var title = Model.Id != 0 ? "Edit Category" : "New Category";
-    var saveUpdate = Model.Id != 0 ? "Update" : "Save";
+   // var saveUpdate = Model.Id != 0 ? "Update" : "Save";
 }
 <form method="post">
     <div class="col-10 border-bottom">
@@ -19,9 +19,22 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+        </div>  
+       @*  here We call the Parital View for the Resulablity of code  *@
+        <div class="form-group row m-2 p-2">
+        <div class="col-8 offset-4">
+                @if(Model.Id !=0)
+                {
+                    <partial name="_EditAndBackToListButtons" />
+                }
+                else
+                {
+                    <partial name="_CreateAndBackToList" />
+                }
+            </div>
         </div>
 
-        <div class="form-group row m-2 p-2">
+     @*    <div class="form-group row m-2 p-2">
             <div class="col-4 offset-4">
                 <button type="submit" class="btn btn-info form-control">
                     @saveUpdate
@@ -32,7 +45,7 @@
                     Back to List
                 </a>
             </div>
-        </div>
+        </div> *@
     </div>
 </form>
 
