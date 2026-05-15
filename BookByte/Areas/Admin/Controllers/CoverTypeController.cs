@@ -9,7 +9,8 @@ namespace BookByte.Areas.Admin.Controllers
         private readonly IUnitOfWork _unitOfWork;   // ✅ private not public
         public CoverTypeController(IUnitOfWork unitOfWork)
         {
-            _unitOfWork = unitOfWork;//test3
+            _unitOfWork = unitOfWork;//test3 //test1111
+          
         }
 
         public IActionResult Index()
