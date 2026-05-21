@@ -170,4 +170,20 @@ Integrated both Partial Views into Category Upsert view for code reusability
 Integrated both Partial Views into CoverType Upsert view for code reusability
 Replaced duplicate button HTML with Partial View calls using @Html.Partial()
 Organized Partial Views under Shared folder for global accessibility
-Reduced code duplication and improved maintainability across Upsert views
+Reduced code duplication and improved maintainability across Upsert views    
+
+
+16 **CoverType Stored Procedure Implementation**
+
+1. Create a Stored Procedure for the `CoverType` model to return a list of records.
+2. Add the stored procedure code in the `DataAccess` project.
+3. Install the **Dapper** package to execute stored procedures, use `DynamicParameters`, and map data to model classes.
+4. Create and apply migration:
+
+```powershell
+Add-Migration AddSPForCoverTypeModel
+Update-Database
+```
+
+5. Add methods in `ISP_CALL` and implement them in `SP_CALL`.
+6. Call the stored procedure in the repository, then use it in the controller and display data in the view.
